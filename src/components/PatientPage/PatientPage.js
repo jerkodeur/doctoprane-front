@@ -29,7 +29,7 @@ const PatientPage = () => {
       {treatmentData.map(treatement => {
         return <Treatment 
         // key={treatment.id} 
-        // name={treatment} icon={treatment}
+        // name={treatment} 
          />
       })}
 
