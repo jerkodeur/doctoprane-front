@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
-import Treatement from './Treatement'
+import Treatment from './Treatment'
 
 const PatientPage = () => {
     //Fetch and set doctor's data
@@ -12,22 +12,25 @@ const PatientPage = () => {
     //   setDoctor(result.data)
     // }
     //Fetch and set treatment's data
-    const [treatementData, setTreatementData] = useState([])
-    const fetchTreatementData = async () => {
+    const [treatmentData, setTreatmentData] = useState([])
+    const fetchTreatmentData = async () => {
       const result = await axios.get('http://localhost:3300/medications')
-      setTreatementData (result.data)
+      setTreatmentData (result.data)
     }
     useEffect(() => {
       // fetchDoctor()
-      fetchTreatementData()
+      fetchTreatmentData()
     }, [])
 
   return (
     <div>
       <h2>Prescriptions</h2>
       {/* <p>Doctor: {doctor} </p> */}
-      {treatementData.map(treatement => {
-        return <Treatement key={treatement.id} name={treatement} icon={treatement} />
+      {treatmentData.map(treatement => {
+        return <Treatment 
+        // key={treatment.id} 
+        // name={treatment} icon={treatment}
+         />
       })}
 
       <Link exact to={{pathname: "/"}}>

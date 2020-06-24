@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Treatement = (props) => {
+const Treatment = (props) => {
 
     return (
       <div>
@@ -12,4 +12,4 @@ const Treatement = (props) => {
   )
 }
 
-export default Treatement 
+export default Treatment 
