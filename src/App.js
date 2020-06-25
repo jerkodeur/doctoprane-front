@@ -1,16 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import LandingPage from './components/LandingPage.js';
 import MonitoringPage from './components/MonitoringPage';
 import PrescriptionPage from './components/PrescriptionPage';
 import PatientPage from './components/PatientPage/PatientPage';
 
+
+
 function App() {
   return (
+    <>
     <Router>
-      <PatientPage />
-
-    
       <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route path="/doctor_monitoring" component={MonitoringPage} />
@@ -18,6 +18,7 @@ function App() {
         <Route path="/patient" component={PatientPage} />
       </Switch>
     </Router>
+    </>
   )
 }
 

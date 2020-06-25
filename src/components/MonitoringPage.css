@@ -5,10 +5,6 @@
   text-shadow: 1px 3px 0 #969696, 1px 10px 5px #aba8a8;
 }
 
-.prescriptionPage-h2{
-  margin: 0;
-}
-
 .flex-medics {
   display: flex;
   flex-direction: row;
@@ -60,7 +56,6 @@ legend {
   padding: 0.5em;
   color: #5964a7;
   font-size: 1.2em;
+  text-align: start;
 }
 
-.mono-footer {
-}
