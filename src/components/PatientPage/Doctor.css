@@ -1,0 +1,4 @@
+.doctor-div{
+  display: flex;
+  flex-direction: column;
+}

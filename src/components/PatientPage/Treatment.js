@@ -17,7 +17,7 @@ const Treatment = (props) => {
     const [doctor, setDoctor] = useState([])
     const fetchDoctor = () => {
       axios
-      .get('http://localhost:3300/doctor/1')
+      .get('http://localhost:3300/doctors/2')
       .then(result => console.log('result', result.data) || setDoctor(result.data))
       .catch(err => console.log('err', err ))  
     }
@@ -27,17 +27,21 @@ const Treatment = (props) => {
       fetchDoctor()
     }, [])
 
+    
+
   return (
     <div className="treatment-div-global">
+    <fieldset>
+    <legend>{props.order}</legend>
+
       {doctor.map(doc => {
       return <Doctor
       key={doc.id} 
       name={doc.lastname} 
       specialty={doc.specialty} />
       })} 
-       
+
       <div className='treatment-div1'>
-        <p> End time: </p>
         <p> 
           {props.date}
           {/* {new Intl.DateTimeFormat("en-GB", {
@@ -46,43 +50,40 @@ const Treatment = (props) => {
           day: "2-digit"
           }).format(props.date)} */}
         </p>
-        <p> Name: </p>
-        <p> {props.name}</p>
-        <p> How much:</p>
-        <p> {props.dosage}</p>
-        <p> When:</p>
-        <div className='treatment-img-div'>
-          <div className='treatment-img-block'>
-            <p>{props.morning ? 'Morning' : null}</p>
-            <img 
-            className='treatment-img'
-            src={props.morning ? morning : null}
-            />
-          </div>
-          <div className='treatment-img-block'>
-            <p>{props.midday ? 'Midday' : null}</p>
-            <img
-            className='treatment-img'
-            src={props.midday ? midday : null}
-            />
-          </div>
-          <div className='treatment-img-block'>
-            <p>{props.evening ? 'Evening' : null}</p>
-            <img
-            className='treatment-img'
-            src={props.evening ? evening : null}
-            />
-          </div>
-          <div className='treatment-img-block'>
-            <p>{props.night ? 'Night' : null}</p>
-            <img
-            className='treatment-img'
-            src={props.night ? night : null}
-            />
+
+          <div>
+   
+            <div className="flex-treatment">
+              <p> {props.name}</p>
+              <div className="flex-treatment-checkboxA">
+
+              <div className="flex-treatment-checkboxB">
+                    <div>morning</div>
+                    <div>midday</div>
+                    <div>evening</div>
+                    <div>night</div>
+                  </div>
+                  <div className="flex-treatment-checkboxC">
+                <div>
+                  <input className='input' type="checkbox" checked={morning ? false : true} disabled />
+                </div>
+                <div>
+                  <input className='input' type="checkbox" checked={midday ? false : true} disabled />
+                </div>
+                <div>
+                  <input className='input' type="checkbox" checked={evening ? false : true} disabled />
+                </div>
+                <div>
+                  <input className='input' type="checkbox" checked={night ? false : true} disabled />
+                </div>
+              </div>
+            </div>
+            </div>
           </div>
           </div>
-      </div>
-    </div>
+          </fieldset>
+          </div>
+
   )
 }
 
