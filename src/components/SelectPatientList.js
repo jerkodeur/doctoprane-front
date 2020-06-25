@@ -5,7 +5,7 @@ import './SelectPatientList.css'
 
 const SelectPatientList = (props) => {
   const { doctor_id, handleChange } = props
-  
+
   const [patientList, setPatientList] = useState()
 
   useEffect(() => {
@@ -16,6 +16,7 @@ const SelectPatientList = (props) => {
   return(
     <div className="select-patients-cont">
       <select name="Patients" id="patients-select" className="select-patients-list" onChange={handleChange}>
+        <option selected>Please select a patient</option>
         {
           patientList && patientList.map(patient =>
             < option value={patient.id} key={patient.id} > {patient.lastname.concat(' ', patient.firstname)}</option>
