@@ -1,83 +1,77 @@
-
 .treatment-div-global {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border: solid 4px #8D94BA;
-    border-radius: 5px;
-    margin: 20px ;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: solid 4px #8d94ba;
+  border-radius: 5px;
+  margin: 20px;
 }
 .treatment-div1 {
-    display: flex;
-    flex-direction: column;
-    padding: 5%;
-    margin-right: 10%;
-    text-align: start;
-    width: 100%;
-}
-.treatment-div2{
-    display: flex;
-    flex-direction: column;
-    padding: 5%;
-    margin-left: 10%;
-    text-align: end;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  text-align: center;
+  width: 100%;
 }
 
-.treatment-img-div{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+.treatment-img-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-.treatment-img{
-    width: 50px;
-   margin: auto; 
-   display: flex;
+.treatment-img {
+  width: 50px;
+  margin: auto;
+  display: flex;
 }
 
-.treatment-img-block{
+.treatment-img-block {
   margin-left: 2%;
 }
-@media (min-width: 800px) {
 
-.treatment-div-global {
+.treatment-div2{
+    display: flex;
+    flex-direction: row;
+}
+@media (min-width: 800px) {
+  .treatment-div-global {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: solid 4px #8D94BA;
+    border: solid 4px #8d94ba;
     border-radius: 5px;
-    margin: 20px ;
-}
-.treatment-div1 {
+    margin: 20px;
+  }
+  .treatment-div1 {
     display: flex;
     flex-direction: column;
     padding: 5%;
     margin-right: 20%;
     text-align: start;
     width: 20%;
-}
-.treatment-div2{
+  }
+  .treatment-div2 {
     display: flex;
     flex-direction: column;
     padding: 5%;
     margin-left: 20%;
     text-align: end;
     width: 20%;
-}
+  }
 
-.treatment-img-div{
+  .treatment-img-div {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-}
+  }
 
-.treatment-img{
+  .treatment-img {
     width: 50px;
-   margin: auto;   
-}
+    margin: auto;
+  }
 
-.treatment-img-block{
-  margin-left: 2%;
-}
+  .treatment-img-block {
+    margin-left: 2%;
+  }
 }

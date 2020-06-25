@@ -9,10 +9,12 @@ function App() {
   return (
     <Router>
       <PatientPage />
+
+    
       <Switch>
-        {/* <Route exact path="/" component={LandingPage} />
+        <Route exact path="/" component={LandingPage} />
         <Route path="/doctor_monitoring" component={MonitoringPage} />
-        <Route path="/doctor_prescription" component={PrescriptionPage} /> */}
+        <Route path="/doctor_prescription" component={PrescriptionPage} />
         <Route path="/patient" component={PatientPage} />
       </Switch>
     </Router>

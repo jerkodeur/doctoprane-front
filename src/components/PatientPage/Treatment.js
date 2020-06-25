@@ -38,11 +38,6 @@ const Treatment = (props) => {
        
       <div className='treatment-div1'>
         <p> End time: </p>
-        <p> Name: </p>
-        <p> How much:</p>
-        <p> When:</p>
-      </div>
-      <div className='treatment-div2'>
         <p> 
           {props.date}
           {/* {new Intl.DateTimeFormat("en-GB", {
@@ -51,8 +46,11 @@ const Treatment = (props) => {
           day: "2-digit"
           }).format(props.date)} */}
         </p>
+        <p> Name: </p>
         <p> {props.name}</p>
+        <p> How much:</p>
         <p> {props.dosage}</p>
+        <p> When:</p>
         <div className='treatment-img-div'>
           <div className='treatment-img-block'>
             <p>{props.morning ? 'Morning' : null}</p>
