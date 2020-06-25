@@ -1,16 +1,21 @@
 .Nav {
- 
+  text-align: center;
 }
+
 .Ul-nav {
-display: flex;
-margin: 5px;
-padding: 0;
-justify-content: center;
+  width: 100%;
+  display: flex;
+  margin: 5px;
+  padding: 0;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 1em;
 }
 
 .Li-nav {
-list-style: none;
-margin-right: 10px;
+  list-style: none;
+  margin-right: 10px;
 }
 
 .btn-bg.bg-1 .btn-1 button {
@@ -23,9 +28,11 @@ margin-right: 10px;
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
 }
+
 /* .btn-bg.bg-1 .btn-1 button a {
   color: #c7f8f9;
 } */
+
 .btn-bg.bg-1 .btn-1 button:hover {
   background: #2EC4B6;
   color: #EFF7F6;
@@ -33,10 +40,12 @@ margin-right: 10px;
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
+
 /* .btn-bg.bg-1 .btn-1 button:hover >a {
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 } */
+
 .btn-bg.bg-1 .btn-1 button:active {
   -webkit-transform: translate(5px, 5px);
   transform: translate(5px, 5px);
@@ -54,17 +63,16 @@ margin-right: 10px;
   font-size: 0.7rem;
 }
 
-
-#login-button:hover{
+#login-button:hover {
   cursor: pointer;
-  background: rgba(3,3,3,.5);
+  background: rgba(3, 3, 3, .5);
 }
 
-#login-button:active{
-  -webkit-background: rgba(255,255,255,.8);
-  background: rgba(255,255,255,.8);
+#login-button:active {
+  -webkit-background: rgba(255, 255, 255, .8);
+  background: rgba(255, 255, 255, .8);
 }
 
-.man:active{
-filter: invert(100%);
+.man:active {
+  filter: invert(100%);
 }

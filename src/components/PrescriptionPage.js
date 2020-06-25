@@ -170,7 +170,7 @@ class PrescriptionPage extends React.Component {
         </form>
       
       <footer>
-        <Nav />
+          <Nav doctor_id={doctor_id} />
       </footer>
       </div>
     );

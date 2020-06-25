@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 import SelectPatientList from './SelectPatientList'
+import Logo from './Logo'
+import Nav from './Nav'
 
 import './MonitoringPage.css'
 
@@ -53,6 +55,8 @@ const MonitoringPage = (props) => {
   const uniqOrders = Array.from(orders)
 
   return (
+    <>
+      <Logo />
     <div className="monotoring-page">
       <h1>Patient monotoring</h1>
       <SelectPatientList doctor_id={doctor_id} handleChange={handleChange} />
@@ -107,7 +111,11 @@ const MonitoringPage = (props) => {
           </>
         ))
       }
-          </div>
+      </div>
+      <footer className="Mono-footer">
+        <Nav doctor_id={doctor_id} />
+      </footer>
+      </>
         )
 }
 
