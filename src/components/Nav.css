@@ -1,23 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:400,100,300,700,100italic,300italic,400italic,700italic,900,900italic");
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
-
-
-ul {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  list-style:none;
-  
+.Nav {
+ 
+}
+.Ul-nav {
+display: flex;
+margin: 5px;
+padding: 0;
+justify-content: center;
 }
 
-ul li{
- margin: 5px;
-
+.Li-nav {
+list-style: none;
+margin-right: 10px;
 }
-
-#login-button{margin-left: 14px;}
-
 
 .btn-bg.bg-1 .btn-1 button {
   color: #6184D8;
@@ -48,35 +42,16 @@ ul li{
   transform: translate(5px, 5px);
 }
 
-button {
+.Button-nav {
+  height: 50px;
+  width: 170px;
   cursor: pointer;
   overflow: hidden;
   outline: none;
   letter-spacing: 0.1em;
   font-weight: 800;
-  padding: 0.5rem 0.9rem 0.5rem 0.9rem;
   text-transform: uppercase;
-  font-family: "Lato";
-  font-size: 0.8em;
-}
-
-
-img.man{
-  margin: auto;
-  width: 100%;
-  height: auto;
-}
-
-#login-button{
-  cursor: pointer;
-  padding: 1.2vh;
-  width: 7vh;
-  height: 7vh;
-  border-radius: 50%;
-  background: rgba(3,3,3,.8);
-  overflow: hidden;
-  opacity: 0.4;
-
+  font-size: 0.7rem;
 }
 
 
@@ -85,17 +60,11 @@ img.man{
   background: rgba(3,3,3,.5);
 }
 
-
-
 #login-button:active{
   -webkit-background: rgba(255,255,255,.8);
   background: rgba(255,255,255,.8);
 }
 
-
 .man:active{
-
-  filter: invert(100%);
-  
- 
+filter: invert(100%);
 }
