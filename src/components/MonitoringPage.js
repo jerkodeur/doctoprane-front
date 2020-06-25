@@ -8,8 +8,7 @@ import Nav from './Nav'
 import './MonitoringPage.css'
 
 const MonitoringPage = (props) => {
-  // const doctor_id = props.location.data.doctor_id
-  const doctor_id = 1
+  const doctor_id = props.location.data.doctor_id
 
   const [patientDatas, setPatientDatas] = useState([])
   const [patientId, setPatientId] = useState()
