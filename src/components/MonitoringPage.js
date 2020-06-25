@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import axios from 'axios'
 
+import SelectPatientList from  './SelectPatientList'
+
 import './MonitoringPage.css'
 
 const MonitoringPage = (props) => {
@@ -13,9 +15,13 @@ const MonitoringPage = (props) => {
       .catch(err => console.log(err))
   }, [])
 
+  const handleChange = (e) => {
+    console.log(e.target.value)
+  }
+
   return (
     <>
-      Hello World
+      <SelectPatientList doctor_id={doctor_id} handleChange={handleChange} />
     </>
   )
 }
