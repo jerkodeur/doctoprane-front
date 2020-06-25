@@ -9,33 +9,39 @@ const LandingPage = () => {
   return (
     <div className='landing-page'>
       <div className="flex-container">
-      <div><img src={logo} alt='Logo' /></div>
-      <p>Log in as</p>
-      <Link to={{
-        pathname: '/doctor_prescription',
-        doctor_id: 1
-      }} ><div>
-          <button>Doctor<hr /><b>Hwarang</b></button></div>
-      </Link>
-      <Link to={{
-        pathname: '/doctor_prescription',
-        doctor_id: 1
-      }} ><div>
+        <div><img src={logo} alt='Logo' /></div>
+        <p>Log in as</p>
+        <Link to={{
+          pathname: '/doctor_prescription',
+          doctor_id: 1
+        }} ><div>
+            <button>Doctor<hr /><b>Hwarang</b></button></div>
+        </Link>
+        <Link to={{
+          pathname: '/doctor_prescription',
+          data: {
+            doctor_id: 2
+          }
+        }} ><div>
             <button>Doctor<hr /><b>Devicci</b></button></div>
-      </Link>
-      <Link to={{
+        </Link>
+        <Link to={{
           pathname: '/patient',
-        patient_id_id: 2
-      }} ><div>
+          data: {
+            patient_id: 1
+          }
+        }} ><div>
             <button>Patient<hr /><b>Jérôme</b></button></div>
-      </Link>
-      <Link to={{
+        </Link>
+        <Link to={{
           pathname: '/patient',
-        patient_id: 1
-      }} >
-        <div>
+          data: {
+            patient_id: 1
+          }
+        }} >
+          <div>
             <button>Patient <hr /><b>Florent</b></button>
-        </div>
+          </div>
         </Link>
       </div>
     </div>
