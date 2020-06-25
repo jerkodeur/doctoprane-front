@@ -1,23 +1,23 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import LandingPage from './components/LandingPage.js';
-import MonitoringPage from './components/MonitoringPage';
-import PrescriptionPage from './components/PrescriptionPage';
-import PatientPage from './components/PatientPage'
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
 
-function App() {
+import Nav from './components/Nav'
+import Monitoring from './components/Monitoring'
+import Prescription from './components/Prescription'
+import Welcome from './components/Welcome'
+import './App.css'
+
+const App = () => {
   return (
-    <>
-    <Router>
-      <Switch>
-        <Route exact path="/" component={LandingPage} />
-        <Route path="/doctor_monitoring" component={MonitoringPage} />
-        <Route path="/doctor_prescription" component={PrescriptionPage} />
-        <Route path="/patient" component={PatientPage} />
+    <div>     
+      <Switch>     
+        <Route path='/monitoring' component={Monitoring} />
+        <Route path='/prescription' component={Prescription} />
+        <Route exact path='/' component={Welcome} />
       </Switch>
-    </Router>
-    </>
+      <Nav />
+    </div>
   )
 }
 
-export default App;
+export default App
