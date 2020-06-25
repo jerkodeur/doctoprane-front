@@ -168,7 +168,7 @@ class PrescriptionPage extends React.Component {
             </button>
           </div>
         </form>
-      
+
       <footer>
           <Nav doctor_id={doctor_id} />
       </footer>

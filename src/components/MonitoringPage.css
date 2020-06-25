@@ -1,29 +1,25 @@
-.monotoring-page {
-  margin-bottom: 10em;
-}
-
 .monotoring-page h1 {
   text-align: center;
   margin-bottom: 20px;
-  color: #a0cfd3;
-  text-shadow: 1px 3px 0 #969696, 1px 10px 5px #aba8a8;
+  color: #8d94ba;
+  text-shadow: 1px 3px 0 #a0cfd3, 1px 6px 5px #aba8a8;
 }
 
-.flex-medics {
+.monotoring-page .flex-medics {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: .5em;
 }
 
-.flex-checkbox {
+.monotoring-page .flex-checkbox {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 75%;
 }
 
-fieldset {
+.monotoring-page fieldset {
   margin: auto;
   width: 75%;
   margin-top: 2em;
@@ -31,36 +27,33 @@ fieldset {
   border: #8d94ba 3px groove;
 }
 
-.text-medics {
+.monotoring-page .text-medics {
   width: 25%;
 }
 
-.txt-small {
+.monotoring-page .txt-small {
   font-size: 0.75em;
 }
 
-.date-green {
+.monotoring-page .date-green {
   color: green;
 }
 
-.date-red {
+.monotoring-page .date-red {
   color: red;
 }
 
-.date {
+.monotoring-page .date {
   margin-bottom: 1.5em;
 }
 
-input {
+.monotoring-page input {
   width: 1.2em;
   height: 1.2em;
 }
 
-legend {
+.monotoring-page legend {
   padding: 0.5em;
   color: #5964a7;
   font-size: 1.2em;
-}
-
-.mono-footer {
 }
