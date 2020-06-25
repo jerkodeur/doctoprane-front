@@ -1,0 +1,18 @@
+.select-patients-cont {
+  text-align: center;
+  margin-top: 5em;
+}
+
+.select-patients-list {
+  padding: 0.5em 1.5em;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #fff;
+  border-color: #8d94ba;
+  border-width: 2px;
+}
+
+.select-patients-cont option:enabled {
+  background-color: #a0cfd3;
+  color: #105333;
+}
