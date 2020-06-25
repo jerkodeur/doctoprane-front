@@ -1,11 +1,13 @@
 import React from 'react'
+import Nav from 'react'
 
-
-const MonitoringPage= () => {
+const MonitoringPage = () => {
 
     return (
-<div></div>
-   )   
+        <div>
+            <Nav />
+        </div>
+    )
 }
 
 export default MonitoringPage

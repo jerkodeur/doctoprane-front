@@ -3,6 +3,7 @@ import Axios from "axios";
 import "./PrescriptionPage.css";
 import Logo from "./Logo";
 import SelectPatientList from "./SelectPatientList";
+import Nav from './Nav'
 
 class PrescriptionPage extends React.Component {
   state = {
@@ -167,6 +168,10 @@ class PrescriptionPage extends React.Component {
             </button>
           </div>
         </form>
+      
+      <footer>
+        <Nav />
+      </footer>
       </div>
     );
   }
