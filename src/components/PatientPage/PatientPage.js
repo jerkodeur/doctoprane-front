@@ -51,7 +51,7 @@ const PatientPage = () => {
         />
       })}
       <Link exact to={{pathname: "/"}}>
-        <button>Exit</button>
+        <button className='btn-exit'>Exit</button>
       </Link>
 
 
