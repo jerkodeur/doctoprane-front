@@ -13,14 +13,16 @@ const LandingPage = () => {
         <p>Log in as</p>
         <Link to={{
           pathname: '/doctor_prescription',
-          doctor_id: 1
+          data: {
+            doctor_id: 2
+          }
         }} ><div>
             <button>Doctor<hr /><b>Hwarang</b></button></div>
         </Link>
         <Link to={{
           pathname: '/doctor_prescription',
           data: {
-            doctor_id: 2
+            doctor_id: 1
           }
         }} ><div>
             <button>Doctor<hr /><b>Devicci</b></button></div>
@@ -36,7 +38,7 @@ const LandingPage = () => {
         <Link to={{
           pathname: '/patient',
           data: {
-            patient_id: 1
+            patient_id: 2
           }
         }} >
           <div>
