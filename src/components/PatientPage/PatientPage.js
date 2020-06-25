@@ -10,14 +10,14 @@ import './PatientPage.css'
 
 const PatientPage = () => {
 
-    //Fetch and set doctor's data
-    const [doctor, setDoctor] = useState([])
-    const fetchDoctor = () => {
-      axios
-      .get('http://localhost:3300/patients/1')
-      .then(result => console.log('result', result.data) || setDoctor(result.data))
-      .catch(err => console.log('err', err ))  
-    }
+    // //Fetch and set doctor's data
+    // const [doctor, setDoctor] = useState([])
+    // const fetchDoctor = () => {
+    //   axios
+    //   .get('http://localhost:3300/doctor/1')
+    //   .then(result => console.log('result', result.data) || setDoctor(result.data))
+    //   .catch(err => console.log('err', err ))  
+    // }
 
     //Fetch and set treatment's data
     const [treatmentData, setTreatmentData] = useState([])
@@ -30,15 +30,13 @@ const PatientPage = () => {
 
     useEffect(() => {
       console.log('ok')
-      fetchDoctor()
+      // fetchDoctor()
       fetchTreatmentData()
     }, [])
 
   return (
     <div className="prescriptionPage-div">
-      <h2 className="prescriptionPage-h2" >Prescriptions</h2>
-      <p>Doctor: {doctor.firstname} {doctor.lastname} </p>
-      <p> Specialty: {doctor.specialty} </p>
+      <h2 className="prescriptionPage-h2" >Prescriptions</h2> 
       {treatmentData.map(treatment => {
         return <Treatment
         key={treatment.id}
@@ -52,9 +50,6 @@ const PatientPage = () => {
         night={treatment.night}
         />
       })}
-
-      {/* <Treatment /> */}
-
       <Link exact to={{pathname: "/"}}>
         <button>Exit</button>
       </Link>
