@@ -1,11 +1,13 @@
 import React from 'react';
 
+import './Treatment.css'
+
 const Treatment = (props) => {
 
     return (
-      <div>
-        <p>End time: {props}</p>
-        <p> {props.name}</p>
+      <div className="treatment-div">
+        <p>End time: </p>
+        <p> Name {props.name}</p>
         <p> How much: {props.dosage}</p>
         <p> When: {props.morning} {props.midday} {props.evening} {props.night} </p>
     </div>

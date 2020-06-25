@@ -22,7 +22,7 @@ const PatientPage = () => {
       setTreatmentData (result.data)
     }
     useEffect(() => {
-      // fetchDoctor()
+      fetchDoctor()
       fetchTreatmentData()
     }, [])
 
@@ -31,6 +31,7 @@ const PatientPage = () => {
       <h2 className="prescriptionPage-h2" >Prescriptions</h2>
       <p>Doctor: {doctor.firstname} {doctor.lastname} </p> 
       <p> Specialty: {doctor.specialty} </p>
+
     
       {treatmentData.map(treatment => {
         return <Treatment 
@@ -45,6 +46,7 @@ const PatientPage = () => {
         />
       })}
 
+      <Treatment />
 
       <Link exact to={{pathname: "/"}}>
         <button>Exit</button>
