@@ -1,0 +1,54 @@
+.PrescriptionPage-container {
+}
+
+.PrescriptionPage-form {
+}
+
+.PrescriptionPage-form .Form-data {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.Prescription-title {
+  text-align: center;
+  margin: 40px;
+}
+
+.PrescriptionPage-form .Form-data label {
+  display: inline-block;
+  width: 80px;
+  margin-right: 10px;
+  text-align: right;
+}
+.PrescriptionPage-form input {
+  width: 150px;
+}
+
+.Title-when {
+  display: flex;
+  justify-content: center;
+}
+
+.When-checkbox {
+  display: flex;
+
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.When-checkbox label {
+  margin: 0px 20px;
+}
+
+.When-checkbox input {
+  width: 20px;
+  margin: 0;
+}
+
+.Button-confirm {
+  align-items: center;
+  height: 50px;
+  width: 80px;
+  border-radius: 10px;
+}
