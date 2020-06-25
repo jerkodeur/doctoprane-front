@@ -1,0 +1,35 @@
+.landing-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.landing-page .flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-page .flex-container p {
+  font-size: 1.5em;
+}
+
+.landing-page .flex-container button {
+  padding: 0.5em;
+  margin: 0.5em;
+  width: 12em;
+  border-radius: 10px;
+  line-height: 1.5em;
+  background-color: #a0cfd3;
+  border-color: #8d94ba;
+}
+
+.landing-page hr {
+  color: #105333
+}
+
+.landing-page b {
+  font-size: 1.3em;
+}
