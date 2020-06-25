@@ -1,24 +1,14 @@
-.PrescriptionPage-container {
-
-}
-
-.PrescriptionPage-form {
-
-}
-
 .PrescriptionPage-form .Form-data {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
-  flex-direction: column;
-  align-items: center;
 }
 
 .Prescription-title {
   text-align: center;
   margin-bottom: 20px;
- color:#8d94ba;
- text-shadow: 1px 3px 0 #a0cfd3, 1px 10px 5px #aba8a8;
+  color: #8d94ba;
+  text-shadow: 1px 3px 0 #a0cfd3, 1px 6px 5px #aba8a8;
 }
 
 .Form-order {
@@ -28,20 +18,24 @@
 
 }
 
-.Form-order input{
-
+.Form-order-input {
   text-align: center;
+  border: 2.2px solid#a0cfd3;
+  border-radius: 5px;
+  padding: .25em;
 }
 
 .PrescriptionPage-form .Form-data label {
-  
- 
- 
+  width: 80px;
+  margin-right: 10px;
+  text-align: right;
 }
-.PrescriptionPage-form input {
+.PrescriptionPage-form-input {
   width: 150px;
   border-radius: 3px;
-  border:2.2px solid #8d94ba;
+  border: 2.2px solid #8d94ba;
+  margin-left: 20px;
+  padding: .25em .5em;
 }
 
 .Title-when {
@@ -62,13 +56,14 @@
 
 .When-checkbox input {
   width: 20px;
-  margin: 0;
   appearance: none;
-  -border-radius: 4px;
+  border-radius: 4px;
+  margin: 0;
   height: 15px;
   width: 15px;
   background: #fff;
   border: 1px solid #ccc;
+  margin-right: 10px;
 }
 input[type="checkbox"]:checked {
   background: #8d94ba;
@@ -77,7 +72,8 @@ input[type="checkbox"]:checked {
 .Button-confirm {
   align-items: center;
   height: 50px;
-  width: 80px;
+  width: 8em;
   border-radius: 10px;
   background-color: #8d94ba;
+  padding: 0.5em;
 }
