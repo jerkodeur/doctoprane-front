@@ -13,7 +13,7 @@ function App() {
         <Route path="/doctor_monitoring" component={MonitoringPage} />
         <Route path="/doctor_prescription" component={PrescriptionPage} />
         <Route path="/patient" component={PatientPage} />
-      </Switch> 
+      </Switch>
     </Router>
   )
 }
