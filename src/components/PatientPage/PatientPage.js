@@ -9,38 +9,41 @@ import './PatientPage.css'
 //ajouter filtre date, docteur
 
 const PatientPage = () => {
+
     //Fetch and set doctor's data
-    // const [doctor, setDoctor] = useState([])
-    // const fetchDoctor = async () => {
-    //   const result = await axios.get('http://localhost:3300/patients')
-    //   setDoctor(result.data)
-    // }
+    const [doctor, setDoctor] = useState([])
+    const fetchDoctor = () => {
+      axios
+      .get('http://localhost:3300/patients/1')
+      .then(result => console.log('result', result.data) || setDoctor(result.data))
+      .catch(err => console.log('err', err ))  
+    }
+
     //Fetch and set treatment's data
     const [treatmentData, setTreatmentData] = useState([])
     const fetchTreatmentData = () => {
       axios
       .get('http://localhost:3300/patients/1')
-        .then(result => console.log('result', result.data) || setTreatmentData(result.data))
+      .then(result => console.log('result', result.data) || setTreatmentData(result.data))
       .catch(err => console.log('err', err ))
-
     }
+
     useEffect(() => {
       console.log('ok')
-      // fetchDoctor()
+      fetchDoctor()
       fetchTreatmentData()
     }, [])
 
   return (
     <div className="prescriptionPage-div">
       <h2 className="prescriptionPage-h2" >Prescriptions</h2>
-      {/* <p>Doctor: {doctor.firstname} {doctor.lastname} </p>
-      <p> Specialty: {doctor.specialty} </p> */}
-
-
+      <p>Doctor: {doctor.firstname} {doctor.lastname} </p>
+      <p> Specialty: {doctor.specialty} </p>
       {treatmentData.map(treatment => {
         return <Treatment
         key={treatment.id}
         name={treatment.med_name}
+        date={treatment.date}
         order={treatment.order_name}
         dosage={treatment.dosage}
         morning={treatment.morning}
