@@ -10,49 +10,53 @@ import './PatientPage.css'
 
 const PatientPage = () => {
     //Fetch and set doctor's data
-    const [doctor, setDoctor] = useState([])
-    const fetchDoctor = async () => {
-      const result = await axios.get('http://localhost:3300/patients')
-      setDoctor(result.data)
-    }
+    // const [doctor, setDoctor] = useState([])
+    // const fetchDoctor = async () => {
+    //   const result = await axios.get('http://localhost:3300/patients')
+    //   setDoctor(result.data)
+    // }
     //Fetch and set treatment's data
     const [treatmentData, setTreatmentData] = useState([])
-    const fetchTreatmentData = async () => {
-      const result = await axios.get('http://localhost:3300/patients')
-      setTreatmentData (result.data)
+    const fetchTreatmentData = () => {
+      axios
+      .get('http://localhost:3300/patients/1')
+        .then(result => console.log('result', result.data) || setTreatmentData(result.data))
+      .catch(err => console.log('err', err ))
+
     }
     useEffect(() => {
-      fetchDoctor()
+      console.log('ok')
+      // fetchDoctor()
       fetchTreatmentData()
     }, [])
 
   return (
     <div className="prescriptionPage-div">
       <h2 className="prescriptionPage-h2" >Prescriptions</h2>
-      <p>Doctor: {doctor.firstname} {doctor.lastname} </p> 
-      <p> Specialty: {doctor.specialty} </p>
+      {/* <p>Doctor: {doctor.firstname} {doctor.lastname} </p>
+      <p> Specialty: {doctor.specialty} </p> */}
 
-    
+
       {treatmentData.map(treatment => {
-        return <Treatment 
-        key={treatment.id} 
-        name={treatment.med_name} 
-        order={treatment.order_name} 
-        dosage={treatment.dosage} 
-        morning={treatment.morning} 
-        midday={treatment.midday} 
-        evening={treatment.evening} 
-        night={treatment.night} 
+        return <Treatment
+        key={treatment.id}
+        name={treatment.med_name}
+        order={treatment.order_name}
+        dosage={treatment.dosage}
+        morning={treatment.morning}
+        midday={treatment.midday}
+        evening={treatment.evening}
+        night={treatment.night}
         />
       })}
 
-      <Treatment />
+      {/* <Treatment /> */}
 
       <Link exact to={{pathname: "/"}}>
         <button>Exit</button>
       </Link>
 
-    
+
     </div>
   )
 
