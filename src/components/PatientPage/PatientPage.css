@@ -1,0 +1,12 @@
+.prescriptionPage-div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: solid 2px black;
+  margin: 10px ;
+}
+
+.prescriptionPage-h2{
+  
+
+}

@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 import Treatment from './Treatment'
+import './PatientPage.css'
+
+
+//ajouter filtre date, docteur
 
 const PatientPage = () => {
     //Fetch and set doctor's data
@@ -23,15 +27,17 @@ const PatientPage = () => {
     }, [])
 
   return (
-    <div>
-      <h2>Prescriptions</h2>
+    <div className="prescriptionPage-div">
+      <h2 className="prescriptionPage-h2" >Prescriptions</h2>
       {/* <p>Doctor: {doctor} </p> */}
-      {treatmentData.map(treatement => {
+      {/* {treatmentData.map(treatment => {
         return <Treatment 
-        // key={treatment.id} 
-        // name={treatment} 
-         />
-      })}
+        key={treatment.id} 
+        name={treatment} 
+        />
+      })} */}
+
+      <Treatment />
 
       <Link exact to={{pathname: "/"}}>
         <button>Exit</button>
