@@ -1,28 +1,47 @@
 .PrescriptionPage-container {
+
 }
 
 .PrescriptionPage-form {
+
 }
 
 .PrescriptionPage-form .Form-data {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Prescription-title {
   text-align: center;
-  margin: 40px;
+  margin-bottom: 20px;
+ color:#8d94ba;
+ text-shadow: 1px 3px 0 #a0cfd3, 1px 10px 5px #aba8a8;
+}
+
+.Form-order {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+
+}
+
+.Form-order input{
+
+  text-align: center;
 }
 
 .PrescriptionPage-form .Form-data label {
-  display: inline-block;
-  width: 80px;
-  margin-right: 10px;
-  text-align: right;
+  
+ 
+ 
 }
 .PrescriptionPage-form input {
   width: 150px;
+  border-radius: 3px;
+  border:2.2px solid #8d94ba;
 }
 
 .Title-when {
@@ -44,6 +63,15 @@
 .When-checkbox input {
   width: 20px;
   margin: 0;
+  appearance: none;
+  -border-radius: 4px;
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+input[type="checkbox"]:checked {
+  background: #8d94ba;
 }
 
 .Button-confirm {
@@ -51,4 +79,5 @@
   height: 50px;
   width: 80px;
   border-radius: 10px;
+  background-color: #8d94ba;
 }

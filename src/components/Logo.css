@@ -1,0 +1,9 @@
+.Logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  
+}
+.Logo-img{
+    height: 80px;
+}
