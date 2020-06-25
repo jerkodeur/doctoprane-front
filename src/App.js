@@ -4,12 +4,10 @@ import LandingPage from './components/LandingPage.js';
 import MonitoringPage from './components/MonitoringPage';
 import PrescriptionPage from './components/PrescriptionPage';
 import PatientPage from './components/PatientPage'
-import SelectPatientList from './components/SelectPatientList'
 
 function App() {
   return (
     <>
-    <SelectPatientList doctor_id="1" />
     <Router>
       <Switch>
         <Route exact path="/" component={LandingPage} />
