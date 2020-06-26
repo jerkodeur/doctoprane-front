@@ -40,9 +40,13 @@ const MonitoringPage = (props) => {
   }
 
   const handleDate = (date) => {
-    let dateTemp = new Date(date)
-    dateTemp = dateTemp.toLocaleDateString('fr-FR')
-    return dateTemp !== '01/01/1970' ? dateTemp : 'Not specified'
+    if (date) {
+      let dateTemp = new Date(date)
+      dateTemp = dateTemp.toLocaleDateString('fr-FR')
+      return dateTemp !== '01/01/1970' ? dateTemp : 'Not specified'
+    } else {
+      return 'Not specified'
+    }
   }
 
   const compareDate = (date) => {

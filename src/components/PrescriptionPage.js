@@ -127,6 +127,7 @@ class PrescriptionPage extends React.Component {
                   id="morning"
                   onChange={this.onChange}
                   value={this.state.morning}
+                  checked={this.state.morning}
                 />
                 Morning
               </label>
@@ -137,6 +138,7 @@ class PrescriptionPage extends React.Component {
                   id="midday"
                   onChange={this.onChange}
                   value={this.state.midday}
+                  checked={this.state.midday}
                 />
                 Midday
               </label>
@@ -147,6 +149,7 @@ class PrescriptionPage extends React.Component {
                   id="evening"
                   onChange={this.onChange}
                   value={this.state.evening}
+                  checked={this.state.evening}
                 />
                 Evening
               </label>
@@ -157,6 +160,7 @@ class PrescriptionPage extends React.Component {
                   id="night"
                   onChange={this.onChange}
                   value={this.state.night}
+                  checked={this.state.night}
                 />
                 Night
               </label>
