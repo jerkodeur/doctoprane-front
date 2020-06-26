@@ -1,7 +1,6 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import Nav from './components/Nav'
 import Monitoring from './components/Monitoring'
 import Prescription from './components/Prescription'
 import Welcome from './components/Welcome'
@@ -21,7 +20,6 @@ const App = () => {
         <Route path='/prescription' component={Prescription} />
         <Route exact path='/' component={Welcome} />
       </Switch>
-      <Nav />
     </div>
   )
 }
