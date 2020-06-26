@@ -4,13 +4,18 @@ import axios from 'axios'
 import './SelectPatientList.css'
 
 const SelectPatientList = (props) => {
-  const { doctor_id, handleChange } = props
+  const { doctor_id, handleChange, all } = props
 
   const [patientList, setPatientList] = useState()
 
   useEffect(() => {
-    axios.get(`http://localhost:3300/doctors/${doctor_id}`)
-    .then(res => setPatientList(res.data))
+    if (all) {
+      axios.get('http://localhost:3300/doctors/')
+        .then(res => setPatientList(res.data))
+    } else {
+      axios.get(`http://localhost:3300/doctors/${doctor_id}`)
+        .then(res => setPatientList(res.data))
+    }
   }, [doctor_id])
 
   return(

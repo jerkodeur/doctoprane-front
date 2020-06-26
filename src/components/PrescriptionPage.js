@@ -75,6 +75,7 @@ class PrescriptionPage extends React.Component {
           <SelectPatientList
             handleChange={this.onChange}
             doctor_id={doctor_id}
+            all
           />
           <div className="Form-order">
             <label></label>
