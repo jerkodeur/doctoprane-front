@@ -19,10 +19,10 @@ const Welcome = () => {
 <div className="user-card">
  <header>
         <h2>Dr. Potié</h2>
-        <p>Généraliste</p>
+        <p>Otolaryngologist</p>
     </header>
         <div class="infos">
- <p>Médecin</p>
+ <p>Doctor</p>
 </div>
  
 </div>
@@ -31,10 +31,10 @@ const Welcome = () => {
 <div className="user-card">
  <header>
         <h2>Dr. Mezzina</h2>
-        <p>Généraliste</p>
+        <p>Orthopedist</p>
     </header>
         <div class="infos">
- <p>Médecin</p>
+ <p>Doctor</p>
 </div>
  
 </div>
@@ -47,7 +47,7 @@ const Welcome = () => {
 <div className="user-card">
  <header>
         <h2>Mr. Voinot</h2>
-        <p>Généraliste</p>
+        <p>Cardiac patient</p>
     </header>
         <div class="infos">
  <p>Patient</p>
@@ -58,7 +58,7 @@ const Welcome = () => {
 <div className="user-card">
  <header>
         <h2>Mr. Gou</h2>
-        <p>Généraliste</p>
+        <p>Diabetic patient</p>
     </header>
         <div class="infos">
  <p>Patient</p>

@@ -14,18 +14,19 @@
   /* font-family: 'Lato', sans-serif; */
   font-weight: 300;
   font-size: 16px;
-  /* text-align: center; */
+  text-align: center;
   font-family: 'Roboto', sans-serif;
   /* background-color:#EFF7F6; */
+  
   height: 900px;
 }
 
 
 
-/* 
-.monit, .prescript, .welcm{
-  height: 665px; 
-              } */
+.monit, .prescript{ height:649px;
+
+}
+
 
 
 

@@ -4,10 +4,12 @@ import './Monitoring.css'
 
 const Monitoring = () => {
   return (
-    <div className='monit'>
+    <div>
+       <div className='monit'>
       <h1>Patient Monitoring</h1>
 
       
+    </div>
     </div>
   )
 }
