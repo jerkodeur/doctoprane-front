@@ -80,7 +80,7 @@ const MonitoringPage = (props) => {
                 </div>
               </div>
                 {
-                  patientDatas.map(medic => {
+                  patientDatas.filter(ord => ord.order_name === order).map(medic => {
                     const { med_name, morning, evening, midday, night } = medic
                     return (
                       <div>
