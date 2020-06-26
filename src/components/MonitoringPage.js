@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import SelectPatientList from './SelectPatientList'
 import Logo from './Logo'
+import Drug from '../images/Drug2.png'
 import Nav from './Nav'
 
 import './MonitoringPage.css'
@@ -112,11 +113,14 @@ const MonitoringPage = (props) => {
                       </div>
                     )
                   })}
+                  
             </fieldset>
           </>
         ))
       }
+      
       </div>
+      <img className="img-drug" src={Drug} alt='Drug' />
       <footer className="Mono-footer">
         <Nav doctor_id={doctor_id} />
       </footer>

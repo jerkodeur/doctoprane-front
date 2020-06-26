@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: .5em;
+  margin-top: 0.5em;
 }
 
 .monotoring-page .flex-checkbox {
@@ -25,6 +25,7 @@
   margin-top: 2em;
   padding: 1em;
   border: #8d94ba 3px groove;
+  background-color: white;
 }
 
 .monotoring-page .text-medics {
@@ -57,3 +58,15 @@
   color: #5964a7;
   font-size: 1.2em;
 }
+
+.img-drug{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  height: 70%;
+  width: 70%;
+
+}
+
+
