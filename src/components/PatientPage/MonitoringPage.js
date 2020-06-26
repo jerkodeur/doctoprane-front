@@ -2,14 +2,12 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 import SelectPatientList from './SelectPatientList'
-import Logo from './Logo'
-import Drug from '../images/Drug2.png'
-import Nav from './Nav'
 
 import './MonitoringPage.css'
 
 const MonitoringPage = (props) => {
-  const doctor_id = props.location.data.doctor_id
+  // const doctor_id = props.location.data.doctor_id
+  const doctor_id = 1
 
   const [patientDatas, setPatientDatas] = useState([])
   const [patientId, setPatientId] = useState()
@@ -17,8 +15,12 @@ const MonitoringPage = (props) => {
   const [dates, setDate] = useState([])
 
   useEffect(() => {
-    axios.get(`http://localhost:3300/doctors/${doctor_id}/patient/${patientId}`)
+    axios.get(`http://localhost:3300/doctors/${doctor_id}/patient/1`)
       .then(res => {
+        // const { date, ...patientDatas } = res.data[0]
+        // let tempDate = new Date(date)
+        // tempDate = tempDate.toLocaleDateString('fr-FR')
+        // patientDatas.date = tempDate
         const datas = res.data
         setPatientDatas(datas)
         let uniqOrders = new Set()
@@ -28,9 +30,11 @@ const MonitoringPage = (props) => {
           setDate(uniqDates.add(last_update))
           return setOrders(uniqOrders.add(order_name))
         })
+        // setOrders(uniqOrders)
+        // console.log(uniqOrders)
       }).catch(err => console.log(err))
 
-  }, [patientId])
+  }, [])
 
   const handleChange = (e) => {
     if (e.target.value !== 'Please select a patient') {
@@ -41,28 +45,14 @@ const MonitoringPage = (props) => {
   }
 
   const handleDate = (date) => {
-    if (date) {
-      let dateTemp = new Date(date)
-      dateTemp = dateTemp.toLocaleDateString('fr-FR')
-      return dateTemp !== '01/01/1970' ? dateTemp : 'Not specified'
-    } else {
-      return 'Not specified'
-    }
-  }
-
-  const compareDate = (date) => {
     let dateTemp = new Date(date)
-    console.log(`%c ${dateTemp}`, 'color:green')
-    let dateTocompare = new Date(new Date().getTime() - (2 * 24 * 60 * 60 * 1000))
-    console.log(`%c ${dateTocompare}`, 'color:red')
-    return dateTemp > dateTocompare ? 'date-green' : 'date-red'
-  }
+    dateTemp = dateTemp.toLocaleDateString('fr-FR')
+    return dateTemp
+}
 
   const uniqOrders = Array.from(orders)
 
   return (
-    <>
-      <Logo />
     <div className="monotoring-page">
       <h1>Patient monotoring</h1>
       <SelectPatientList doctor_id={doctor_id} handleChange={handleChange} />
@@ -73,28 +63,24 @@ const MonitoringPage = (props) => {
           <>
             <fieldset>
               <legend>{order}</legend>
-              <div className="date">Last Update: <span className={compareDate(Array.from(dates)[id])}>{handleDate(Array.from(dates)[id])}</span></div>
               <div>
                 <div className="flex-medics">
-                  <div className="text-medic">
-                  </div>
+                  {handleDate(Array.from(dates)[id])}
                   <div className="flex-checkbox">
-                    <div className="txt-small">morning</div>
-                    <div className="txt-small">midday</div>
-                    <div className="txt-small">evening</div>
-                    <div className="txt-small">night</div>
+                    <div>morning</div>
+                    <div>midday</div>
+                    <div>evening</div>
+                    <div>night</div>
                   </div>
                 </div>
               </div>
                 {
-                  patientDatas.filter(ord => ord.order_name === order).map(medic => {
+                  patientDatas.map(medic => {
                     const { med_name, morning, evening, midday, night } = medic
                     return (
                       <div>
                         <div className="flex-medics">
-                          <div className="text-medic">
-                            {med_name}
-                          </div>
+                          {med_name}
                           <div className="flex-checkbox">
                             <div>
                               <input type="checkbox" checked={morning ? false : true} disabled />
@@ -113,18 +99,11 @@ const MonitoringPage = (props) => {
                       </div>
                     )
                   })}
-                  
             </fieldset>
           </>
         ))
       }
-      
-      </div>
-      <img className="img-drug" src={Drug} alt='Drug' />
-      <footer className="Mono-footer">
-        <Nav doctor_id={doctor_id} />
-      </footer>
-      </>
+          </div>
         )
 }
 

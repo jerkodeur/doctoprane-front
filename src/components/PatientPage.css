@@ -1,0 +1,56 @@
+.prescriptionPage-div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px ;
+}
+
+.prescriptionPage-h2{
+  color: rgb(95, 186, 168);
+}
+
+.btn-exit {
+  color: #6184D8;
+  background: #EFF7F6;
+  border: 4px solid #6184D8;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.btn-exit button:hover {
+  background: #2EC4B6;
+  color: #EFF7F6;
+  border: 3px solid white;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.btn-exit:active {
+  -webkit-transform: translate(5px, 5px);
+  transform: translate(5px, 5px);
+}
+
+.Button-nav {
+  height: 50px;
+  width: 170px;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+#login-button:hover {
+  cursor: pointer;
+  background: rgba(3, 3, 3, .5);
+}
+
+#login-button:active {
+  -webkit-background: rgba(255, 255, 255, .8);
+  background: rgba(255, 255, 255, .8);
+}
