@@ -33,6 +33,7 @@
   margin-right: 10px;
   text-align: right;
 }
+
 .PrescriptionPage-form-input {
   width: 150px;
   border-radius: 3px;
@@ -48,7 +49,6 @@
 
 .When-checkbox {
   display: flex;
-
   flex-direction: column;
   margin-bottom: 30px;
 }
@@ -68,6 +68,7 @@
   border: 1px solid #ccc;
   margin-right: 10px;
 }
+
 input[type="checkbox"]:checked {
   background: #8d94ba;
 }
@@ -78,6 +79,15 @@ input[type="checkbox"]:checked {
   width: 8em;
   border-radius: 10px;
   background-color: #2EC4B6;
-  border-color:  #2EC4B6 ;
+  border-color: #2EC4B6;
   padding: 0.5em;
+}
+
+img.medoc {
+  width: 70%;
+  height: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
 }

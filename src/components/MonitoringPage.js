@@ -6,6 +6,7 @@ import Logo from './Logo'
 import Nav from './Nav'
 
 import './MonitoringPage.css'
+import medoc from '../images/medoc.png'
 
 const MonitoringPage = (props) => {
   const doctor_id = props.location.data.doctor_id
@@ -67,7 +68,7 @@ const MonitoringPage = (props) => {
       <SelectPatientList doctor_id={doctor_id} handleChange={handleChange} />
       {console.table(patientDatas) && console.log(new Set(patientDatas.order_name))
       }
-      {patientId &&
+      {patientId ?
         uniqOrders.map((order, id) => (
           <>
             <fieldset>
@@ -115,6 +116,8 @@ const MonitoringPage = (props) => {
             </fieldset>
           </>
         ))
+          :
+          <img src={medoc} alt='' className='medoc' />
       }
       </div>
       <footer className="Mono-footer">
