@@ -16,7 +16,7 @@ const MonitoringPage = (props) => {
   const [dates, setDate] = useState([])
 
   useEffect(() => {
-    axios.get(`http://localhost:3300/doctors/${doctor_id}/patient/1`)
+    axios.get(`http://localhost:3300/doctors/${doctor_id}/patient/${patientId}`)
       .then(res => {
         const datas = res.data
         setPatientDatas(datas)
@@ -29,7 +29,7 @@ const MonitoringPage = (props) => {
         })
       }).catch(err => console.log(err))
 
-  }, [])
+  }, [patientId])
 
   const handleChange = (e) => {
     if (e.target.value !== 'Please select a patient') {

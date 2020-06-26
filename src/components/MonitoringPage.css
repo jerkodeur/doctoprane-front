@@ -1,3 +1,7 @@
+.monotoring-page {
+  margin-bottom: 1em;
+}
+
 .monotoring-page h1 {
   text-align: center;
   margin-bottom: 20px;
@@ -16,19 +20,19 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 75%;
+  width: 65%;
 }
 
 .monotoring-page fieldset {
   margin: auto;
-  width: 75%;
+  width: 80%;
   margin-top: 2em;
   padding: 1em;
   border: #8d94ba 3px groove;
 }
 
 .monotoring-page .text-medics {
-  width: 25%;
+  width: 35%;
 }
 
 .monotoring-page .txt-small {
@@ -43,8 +47,8 @@
   color: red;
 }
 
-.monotoring-page .date {
-  margin-bottom: 1.5em;
+.monotoring-page .patient-date {
+  margin-bottom: 1em;
 }
 
 .monotoring-page input {
@@ -54,6 +58,55 @@
 
 .monotoring-page legend {
   padding: 0.5em;
-  color: #5964a7;
+  color: #7b7c81;
   font-size: 1.2em;
+}
+
+.monotoring-page .order-text {
+  color: #444e86;
+  font-weight: bold;
+}
+
+.custom-flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+}
+
+.custom-descrip {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.custom-checkbox {
+  width: 40%;
+  text-align: center;
+  margin: auto;
+}
+
+.custom-chebox input {
+  width: 3em;
+  height: 3em;
+}
+
+.custom-chebox input:checked {
+  background-color: rgb(94, 48, 48);
+}
+
+input[type="checkbox" i] {
+  background-color: #444e86;
+  cursor: default;
+  -webkit-appearance: checkbox;
+  box-sizing: border-box;
+  margin: 3px 3px 3px 4px;
+  padding: initial;
+  border: initial;
+}
+
+.custom-chebox input:active {
+  background-color: red;
 }

@@ -6,12 +6,12 @@ import Logo from './Logo'
 import './MonitoringPage.css'
 
 const MonitoringPage = (props) => {
-    // const doctor_id = props.location.data.doctor_id
-    const patient_id = 1
+    const patient_id = props.location.data.patient_id
 
     const [patientDatas, setPatientDatas] = useState([])
     const [orders, setOrders] = useState([])
     const [dates, setDate] = useState([])
+    const [doctors, setDoctors] = useState([])
 
     useEffect(() => {
         axios.get(`http://localhost:3300/patients/${patient_id}`)
@@ -20,16 +20,26 @@ const MonitoringPage = (props) => {
                 setPatientDatas(datas)
                 let uniqOrders = new Set()
                 let uniqDates = new Set()
+                let uniqDoctor = new Set()
                 datas.map(order => {
                     const { order_name, date } = order
+                    const nameDoctor = order.lastname.concat(' ', order.firstname)
+                    uniqDoctor.add(nameDoctor)
                     uniqDates.add(date)
                     return uniqOrders.add(order_name)
                 })
                 setDate(uniqDates)
                 setOrders(uniqOrders)
+                setDoctors(uniqDoctor)
 
             }).catch(err => console.log(err))
     }, [])
+
+    const handleChange = (order) => {
+        axios.put(`http://localhost:3300/medications/${patient_id}/order/${order}`)
+            .then(res => console.log('Update ok'))
+            .catch(err => console.log(err))
+    }
 
     const handleDate = (date) => {
         let dateTemp = new Date(date)
@@ -52,7 +62,18 @@ const MonitoringPage = (props) => {
                         <>
                             <fieldset>
                                 <legend>{order}</legend>
-                                <div className="date">End Date: <span className='order-date'>{handleDate(Array.from(dates)[id])}</span></div>
+                                <div className='custom-flexbox'>
+                                    <div className='custom-descrip'>
+                                        <div className="patient-date">Doctor: <span className='order-text'>{Array.from(doctors)[id]}</span></div>
+                                        <div className="patient-date">End Date: <span className='order-text'>{handleDate(Array.from(dates)[id])
+                                        }
+                                        </span>
+                                        </div>
+                                    </div>
+                                    <div className='custom-chebox'>
+                                        <input type="checkbox" className="checkbox-custom" onChange={() => handleChange(order)} />
+                                    </div>
+                                </div>
                                 <div>
                                     <div className="flex-medics">
                                         <div className="text-medic">
