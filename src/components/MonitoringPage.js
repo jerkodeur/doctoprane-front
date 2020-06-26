@@ -8,8 +8,7 @@ import Nav from './Nav'
 import './MonitoringPage.css'
 
 const MonitoringPage = (props) => {
-  // const doctor_id = props.location.data.doctor_id
-  const doctor_id = 1
+  const doctor_id = props.location.data.doctor_id
 
   const [patientDatas, setPatientDatas] = useState([])
   const [patientId, setPatientId] = useState()
@@ -41,15 +40,21 @@ const MonitoringPage = (props) => {
   }
 
   const handleDate = (date) => {
-    let dateTemp = new Date(date)
-    dateTemp = dateTemp.toLocaleDateString('fr-FR')
-    return dateTemp
+    if (date) {
+      let dateTemp = new Date(date)
+      dateTemp = dateTemp.toLocaleDateString('fr-FR')
+      return dateTemp !== '01/01/1970' ? dateTemp : 'Not specified'
+    } else {
+      return 'Not specified'
+    }
   }
 
   const compareDate = (date) => {
     let dateTemp = new Date(date)
-    let dateTocompare = new Date(new Date().getTime() + (2 * 24 * 60 * 60 * 1000))
-    return dateTemp < dateTocompare ? 'date-green' : 'date-red'
+    console.log(`%c ${dateTemp}`, 'color:green')
+    let dateTocompare = new Date(new Date().getTime() - (2 * 24 * 60 * 60 * 1000))
+    console.log(`%c ${dateTocompare}`, 'color:red')
+    return dateTemp > dateTocompare ? 'date-green' : 'date-red'
   }
 
   const uniqOrders = Array.from(orders)
@@ -81,7 +86,7 @@ const MonitoringPage = (props) => {
                 </div>
               </div>
                 {
-                  patientDatas.map(medic => {
+                  patientDatas.filter(ord => ord.order_name === order).map(medic => {
                     const { med_name, morning, evening, midday, night } = medic
                     return (
                       <div>

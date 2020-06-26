@@ -75,6 +75,7 @@ class PrescriptionPage extends React.Component {
           <SelectPatientList
             handleChange={this.onChange}
             doctor_id={doctor_id}
+            all
           />
           <div className="Form-order">
             <label></label>
@@ -127,6 +128,7 @@ class PrescriptionPage extends React.Component {
                   id="morning"
                   onChange={this.onChange}
                   value={this.state.morning}
+                  checked={this.state.morning}
                 />
                 Morning
               </label>
@@ -137,6 +139,7 @@ class PrescriptionPage extends React.Component {
                   id="midday"
                   onChange={this.onChange}
                   value={this.state.midday}
+                  checked={this.state.midday}
                 />
                 Midday
               </label>
@@ -147,6 +150,7 @@ class PrescriptionPage extends React.Component {
                   id="evening"
                   onChange={this.onChange}
                   value={this.state.evening}
+                  checked={this.state.evening}
                 />
                 Evening
               </label>
@@ -157,6 +161,7 @@ class PrescriptionPage extends React.Component {
                   id="night"
                   onChange={this.onChange}
                   value={this.state.night}
+                  checked={this.state.night}
                 />
                 Night
               </label>
@@ -168,7 +173,7 @@ class PrescriptionPage extends React.Component {
             </button>
           </div>
         </form>
-      
+
       <footer>
           <Nav doctor_id={doctor_id} />
       </footer>
