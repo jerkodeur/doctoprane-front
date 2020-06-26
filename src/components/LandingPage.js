@@ -12,7 +12,7 @@ const LandingPage = () => {
         <div><img src={logo} alt='Logo' /></div>
         <p>Log in as</p>
         <Link to={{
-          pathname: '/doctor_monitoring',
+          pathname: '/doctor_prescription',
           data: {
             doctor_id: 2
           }
