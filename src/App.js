@@ -9,7 +9,13 @@ import './App.css'
 
 const App = () => {
   return (
-    <div>     
+    <div className='body'> 
+    
+  <div className="starsec"></div>
+  <div className="starthird"></div>
+  <div className="starfourth"></div>
+  <div className="starfifth"></div>
+    
       <Switch>     
         <Route path='/monitoring' component={Monitoring} />
         <Route path='/prescription' component={Prescription} />
