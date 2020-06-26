@@ -42,13 +42,15 @@ const MonitoringPage = (props) => {
   const handleDate = (date) => {
     let dateTemp = new Date(date)
     dateTemp = dateTemp.toLocaleDateString('fr-FR')
-    return dateTemp
+    return dateTemp !== '01/01/1970' ? dateTemp : 'Not specified'
   }
 
   const compareDate = (date) => {
     let dateTemp = new Date(date)
-    let dateTocompare = new Date(new Date().getTime() + (2 * 24 * 60 * 60 * 1000))
-    return dateTemp < dateTocompare ? 'date-green' : 'date-red'
+    console.log(`%c ${dateTemp}`, 'color:green')
+    let dateTocompare = new Date(new Date().getTime() - (2 * 24 * 60 * 60 * 1000))
+    console.log(`%c ${dateTocompare}`, 'color:red')
+    return dateTemp > dateTocompare ? 'date-green' : 'date-red'
   }
 
   const uniqOrders = Array.from(orders)
