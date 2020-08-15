@@ -17,7 +17,7 @@ const MonitoringPage = (props) => {
   const [dates, setDate] = useState([])
 
   useEffect(() => {
-    axios.get(`http://localhost:7500/doctors/${doctor_id}/patient/${patientId}`)
+    axios.get(`/doctors/${doctor_id}/patient/${patientId}`)
       .then(res => {
         const datas = res.data
         setPatientDatas(datas)

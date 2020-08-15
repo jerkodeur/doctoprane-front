@@ -14,7 +14,7 @@ const MonitoringPage = (props) => {
   const [doctors, setDoctors] = useState([])
 
   useEffect(() => {
-    axios.get(`http://localhost:7500/patients/${patient_id}`)
+    axios.get(`/patients/${patient_id}`)
       .then(res => {
         const datas = res.data
         setPatientDatas(datas)
@@ -36,7 +36,7 @@ const MonitoringPage = (props) => {
   }, [])
 
   const handleChange = (order) => {
-    axios.put(`http://localhost:7500/medications/${patient_id}/order/${order}`)
+    axios.put(`/medications/${patient_id}/order/${order}`)
       .then(res => console.log('Update ok'))
       .catch(err => console.log(err))
   }

@@ -10,10 +10,10 @@ const SelectPatientList = (props) => {
 
   useEffect(() => {
     if (all) {
-      axios.get('http://localhost:7500/doctors/')
+      axios.get('/doctors/')
         .then(res => setPatientList(res.data))
     } else {
-      axios.get(`http://localhost:7500/doctors/${doctor_id}`)
+      axios.get(`/doctors/${doctor_id}`)
         .then(res => setPatientList(res.data))
     }
   }, [doctor_id])
