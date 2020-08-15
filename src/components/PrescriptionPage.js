@@ -48,7 +48,7 @@ class PrescriptionPage extends React.Component {
   submitForm = (e) => {
     e.preventDefault();
 
-    const url = "http://localhost:3300/medications";
+    const url = "http://localhost:7500/medications";
     Axios.post(url, this.state)
       .then(res => {
         this.setState({

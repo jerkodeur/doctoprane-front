@@ -14,7 +14,7 @@ const PatientPage = () => {
     // const [doctor, setDoctor] = useState([])
     // const fetchDoctor = () => {
     //   axios
-    //   .get('http://localhost:3300/doctor/1')
+    //   .get('http://localhost:7500/doctor/1')
     //   .then(result => console.log('result', result.data) || setDoctor(result.data))
     //   .catch(err => console.log('err', err ))  
     // }
@@ -23,7 +23,7 @@ const PatientPage = () => {
     const [treatmentData, setTreatmentData] = useState([])
     const fetchTreatmentData = () => {
       axios
-      .get('http://localhost:3300/patients/1')
+      .get('http://localhost:7500/patients/1')
       .then(result => console.log('result', result.data) || setTreatmentData(result.data))
       .catch(err => console.log('err', err ))
     }

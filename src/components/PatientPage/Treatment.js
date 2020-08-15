@@ -17,7 +17,7 @@ const Treatment = (props) => {
   const [doctor, setDoctor] = useState([])
   const fetchDoctor = () => {
     axios
-      .get('http://localhost:3300/doctors/2')
+      .get('http://localhost:7500/doctors/2')
       .then(result => console.log('result', result.data) || setDoctor(result.data))
       .catch(err => console.log('err', err))
   }

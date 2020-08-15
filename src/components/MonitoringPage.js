@@ -17,7 +17,7 @@ const MonitoringPage = (props) => {
   const [dates, setDate] = useState([])
 
   useEffect(() => {
-    axios.get(`http://localhost:3300/doctors/${doctor_id}/patient/${patientId}`)
+    axios.get(`http://localhost:7500/doctors/${doctor_id}/patient/${patientId}`)
       .then(res => {
         const datas = res.data
         setPatientDatas(datas)
@@ -25,9 +25,11 @@ const MonitoringPage = (props) => {
         let uniqDates = new Set()
         datas.map(order => {
           const { order_name, last_update } = order
-          setDate(uniqDates.add(last_update))
-          return setOrders(uniqOrders.add(order_name))
+          uniqDates.add(last_update)
+          return uniqOrders.add(order_name)
         })
+        setDate(uniqDates)
+        setOrders(uniqOrders)
       }).catch(err => console.log(err))
 
   }, [patientId])
@@ -52,9 +54,7 @@ const MonitoringPage = (props) => {
 
   const compareDate = (date) => {
     let dateTemp = new Date(date)
-    console.log(`%c ${dateTemp}`, 'color:green')
     let dateTocompare = new Date(new Date().getTime() - (2 * 24 * 60 * 60 * 1000))
-    console.log(`%c ${dateTocompare}`, 'color:red')
     return dateTemp > dateTocompare ? 'date-green' : 'date-red'
   }
 
@@ -66,8 +66,6 @@ const MonitoringPage = (props) => {
     <div className="monotoring-page">
       <h1>Patient monotoring</h1>
       <SelectPatientList doctor_id={doctor_id} handleChange={handleChange} />
-      {console.table(patientDatas) && console.log(new Set(patientDatas.order_name))
-      }
       {patientId ?
         uniqOrders.map((order, id) => (
           <>
@@ -97,16 +95,16 @@ const MonitoringPage = (props) => {
                           </div>
                           <div className="flex-checkbox">
                             <div>
-                              <input type="checkbox" checked={morning ? false : true} disabled />
+                              <input type="checkbox" checked={morning ? true : false} disabled />
                             </div>
                             <div>
-                              <input type="checkbox" checked={midday ? false : true} disabled />
+                              <input type="checkbox" checked={midday ? true : false} disabled />
                             </div>
                             <div>
-                              <input type="checkbox" checked={evening ? false : true} disabled />
+                              <input type="checkbox" checked={evening ? true : false} disabled />
                             </div>
                             <div>
-                              <input type="checkbox" checked={night ? false : true} disabled />
+                              <input type="checkbox" checked={night ? true : false} disabled />
                             </div>
                           </div>
                         </div>
