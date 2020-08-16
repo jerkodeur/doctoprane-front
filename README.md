@@ -14,12 +14,12 @@ afin de permettre un suivi des prescriptions.
 * Suivre si les patients prennent bien leurs médicaments
 #### Pour les patients
 * Avoir un aperçu des médicaments à prendre au jour le jour
-* Informer le practicien de la prise de ses médicaments
+* Informer le praticien de la prise de ses médicaments
 
 ### Objectifs de l'application
 * Réduire le gachis de médicaments grâce à un suivi détaillé.
 * Le médecin à la possibilité de rappeler à ses patients de prendre leurs médicaments en cas d'oubli.
-* Eviter de se déplacer chez le practicien lorsque cela n'est pas nécessaire
+* Eviter de se déplacer chez le praticien lorsque cela n'est pas nécessaire
 * Le patient peut en un coup d'oeil voir tous les médicaments à prendre dans la journée
 
 ### Technos utilisées
